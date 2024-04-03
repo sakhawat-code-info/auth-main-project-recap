@@ -29,6 +29,9 @@ const AuthProvider = ({ children }) => {
             if (currentUser) {
                 setUser(currentUser);
                 setLoading(false);
+            } else {
+                setUser('');
+                setLoading(false);
             }
         });
         return () => {

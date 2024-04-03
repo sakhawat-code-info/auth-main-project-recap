@@ -13,6 +13,7 @@ import Register from './pages/Register';
 
 import ListItems from './components/ListItems';
 import AuthProvider from './AuthProvider/AuthProvider';
+import ProtectedRout from './ProtectedRout/ProtectedRout';
 
 
 
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/items",
-        element: <ListItems></ListItems>,
+        element: <ProtectedRout><ListItems></ListItems></ProtectedRout>,
       },
     ],
   },
